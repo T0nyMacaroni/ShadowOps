@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ShadowOps – Coming soon</title>
+<meta name="description" content="ShadowOps is launching soon. Penetration testing, red teaming and purple teaming.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230b0d16'/><path d='M16 5 6 9v7c0 6 4 9 10 11 6-2 10-5 10-11V9z' fill='%238b6cff'/><path d='M16 5v22c-6-2-10-5-10-11V9z' fill='%230b0d16'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0b0d16; --line:#262a48; --panel:#12152a;
+  --text:#ece9f5; --muted:#a2a0b8; --violet:#8b6cff; --signal:#ff5d73;
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:"Instrument Sans","Segoe UI",system-ui,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+body{background:var(--ink);color:var(--text);font:400 1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+:focus-visible{outline:2px solid var(--violet);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;overflow:hidden;
+  background:
+   radial-gradient(circle 420px at var(--x,70%) var(--y,40%),rgba(139,108,255,.16),transparent 70%),
+   linear-gradient(var(--line) 1px,transparent 1px) 0 0/56px 56px,
+   linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/56px 56px,
+   var(--ink);
+  background-blend-mode:normal,soft-light,soft-light,normal}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,transparent 20%,var(--ink) 95%);pointer-events:none}
+
+header{position:relative;z-index:3;padding:1.4rem 0}
+.logo{display:inline-flex;align-items:center;gap:.6rem;font:800 1.3rem var(--display);letter-spacing:-.01em}
+
+main{position:relative;z-index:3;flex:1;display:flex;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:.6rem;font:500 .85rem var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:1.4rem}
+.eyebrow::before{content:"";width:.55rem;height:.55rem;border-radius:50%;background:var(--signal);box-shadow:0 0 0 0 rgba(255,93,115,.6);animation:pulse 2.2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 .7rem rgba(255,93,115,0)}100%{box-shadow:0 0 0 0 rgba(255,93,115,0)}}
+h1{font:800 clamp(2.8rem,8vw,6.2rem)/.98 var(--display);letter-spacing:-.035em;max-width:11ch}
+h1 em{font-style:normal;color:var(--violet)}
+.lead{margin-top:1.6rem;max-width:46ch;color:var(--muted);font-size:1.2rem}
+
+form{margin-top:2.2rem;display:flex;gap:.7rem;flex-wrap:wrap;max-width:32rem}
+input{flex:1 1 15rem;font:400 1rem var(--body);color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.8rem .95rem}
+input::placeholder{color:#7e7c96}
+input:focus{outline:2px solid var(--violet);outline-offset:1px;border-color:transparent}
+button{padding:.8rem 1.4rem;border:1px solid var(--violet);border-radius:8px;background:var(--violet);color:#fff;font:600 1rem var(--body);cursor:pointer;transition:background .2s,transform .2s}
+button:hover{background:#a08aff;transform:translateY(-1px)}
+.hint{margin-top:1.6rem;color:var(--muted);font-size:.92rem}
+
+footer{position:relative;z-index:3;padding:1.6rem 0;color:var(--muted);font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;border-top:1px solid var(--line);padding-top:1.4rem}
+
+.found{position:absolute;inset:0;z-index:1;pointer-events:none;
+  -webkit-mask-image:radial-gradient(circle 190px at var(--x,70%) var(--y,40%),#000 30%,transparent 100%);
+          mask-image:radial-gradient(circle 190px at var(--x,70%) var(--y,40%),#000 30%,transparent 100%)}
+.found span{position:absolute;font:500 .88rem var(--mono);color:var(--signal);white-space:nowrap;
+  padding:.35rem .6rem;border:1px solid rgba(255,93,115,.45);border-radius:6px;background:rgba(255,93,115,.08)}
+.found span::before{content:"";display:inline-block;width:.5rem;height:.5rem;border-radius:50%;background:var(--signal);margin-right:.55rem}
+
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="hero" id="hero">
+  <div class="found" aria-hidden="true">
+    <span style="left:8%;top:24%">status: staging environment</span>
+    <span style="left:56%;top:16%">pentesting: ready</span>
+    <span style="left:64%;top:46%">red teaming: ready</span>
+    <span style="left:12%;top:68%">purple teaming: ready</span>
+    <span style="left:58%;top:74%">launch: imminent</span>
+    <span style="left:32%;top:88%">website: 98% deployed</span>
+    <span style="left:78%;top:30%">you found us early</span>
+  </div>
+
+  <header>
+    <div class="wrap">
+      <span class="logo">
+        <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 5 7.5v8c0 6.500 4.500 10 11 12.500 6.500-2.500 11-6 11-12.500v-8z" fill="#8b6cff"/><path d="M16 3v25C9.500 25.500 5 22 5 15.500v-8z" fill="#0b0d16"/></svg>
+        ShadowOps
+      </span>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="eyebrow">Launching soon</div>
+      <h1>Something is <em>moving</em> in the dark.</h1>
+      <p class="lead">Site is Loading ....</p>
+      <form id="form">
+        <input type="email" name="email" placeholder="you@company.com" aria-label="Email address" required autocomplete="email">
+        <button type="submit">Notify me</button>
+      </form>
+      <p class="hint" id="hint">Get a notification when the site launches.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© <span id="yr"></span> ShadowOps. Authorised testing only.</span>
+      <span>contact@shadowops.eu</span>
+    </div>
+  </footer>
+</div>
+
+<script>
+const hero=document.getElementById('hero'),found=hero.querySelector('.found'),hint=document.getElementById('hint');
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let t=0,pointer=false;
+const set=(x,y)=>{for(const el of [hero,found]){el.style.setProperty('--x',x+'px');el.style.setProperty('--y',y+'px')}};
+hero.addEventListener('pointermove',e=>{if(e.pointerType==='mouse'){pointer=true;const r=hero.getBoundingClientRect();set(e.clientX-r.left,e.clientY-r.top)}});
+hero.addEventListener('pointerleave',()=>{pointer=false});
+if(!reduce){(function drift(){
+  if(!pointer){const r=hero.getBoundingClientRect();t+=.006;
+    set(r.width*(.5+.38*Math.sin(t*1.3)),r.height*(.5+.3*Math.sin(t*1.9+1)))}
+  requestAnimationFrame(drift)})();
+}else{set(innerWidth*.65,innerHeight*.45)}
+if(matchMedia('(hover: none)').matches)hint.textContent='The light is scanning. Watch what it uncovers.';
+document.getElementById('yr').textContent=new Date().getFullYear();
+document.getElementById('form').addEventListener('submit',e=>{
+  e.preventDefault();const email=new FormData(e.target).get('email');
+  location.href='mailto:contact@shadowops.eu?subject='+encodeURIComponent('Notify me at launch')+'&body='+encodeURIComponent('Please notify me when ShadowOps launches: '+email);
+});
+</script>
+</body>
+</html>
