@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Active Directory &amp; Cloud Security Reviews | ShadowOps</title>
+<meta name="description" content="In-depth Active Directory, AD CS, Entra ID, Azure, AWS and Google Cloud security reviews that map the attack paths to your most valuable assets and show how to close them.">
+<meta name="theme-color" content="#0B0916">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ShadowOps">
+<meta property="og:title" content="Active Directory &amp; Cloud Security Reviews | ShadowOps">
+<meta property="og:description" content="In-depth Active Directory, AD CS, Entra ID, Azure, AWS and Google Cloud security reviews that map the attack paths to your most valuable assets and show how to close them.">
+<meta property="og:image" content="assets/brand/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="ShadowOps home"><img src="assets/brand/shadowops-logo-horizontal-dark.svg" alt="ShadowOps – Offensive Security Refined" width="142" height="46"></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+      <svg class="open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <div class="nav-drop current">
+        <button type="button" aria-expanded="false" aria-controls="mega">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="mega" id="mega">
+          <a href="penetration-testing.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M1 12h4M19 12h4"/></svg></span><strong>Penetration Testing</strong><span>Networks, systems, web applications and APIs</span></a>
+          <a href="adversary-simulation.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="12" r="6"/><circle cx="15" cy="12" r="6"/></svg></span><strong>Red &amp; Purple Teaming</strong><span>Adversary simulation and detection tuning</span></a>
+          <a href="security-reviews.html" aria-current="page"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><path d="M12 7v5M5 17v-5h14v5"/></svg></span><strong>Active Directory &amp; Cloud</strong><span>Identity and configuration reviews</span></a>
+          <a href="training.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m6 9 3 3-3 3M12 15h5"/></svg></span><strong>Offensive Security Training</strong><span>Custom, hands-on courses for your team</span></a>
+        </div>
+      </div>
+      <a href="index.html#approach">Approach</a>
+      <a href="index.html#why">Why ShadowOps</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn" href="contact.html">Book a scoping call</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero grid-bg">
+    <div class="wrap split">
+      <div data-enter>
+        <ol class="crumbs"><li><a href="index.html">Home</a></li><li><a href="index.html#services">Services</a></li><li aria-current="page">AD &amp; Cloud Reviews</li></ol>
+        <p class="eyebrow">03 / Review</p>
+        <h1>Active Directory and cloud reviews that map every path to the top</h1>
+        <p class="lead">Most serious breaches escalate through identity and misconfiguration. We combine offensive tooling with a line-by-line configuration review to show exactly how an attacker would climb, and how to cut the ladder.</p>
+        <div class="btn-row">
+          <a class="btn" href="contact.html?service=AD%20or%20cloud%20review">Request a review <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <nav class="jump" aria-label="On this page"><a href="#ad">Active Directory</a><a href="#cloud">Cloud</a><a href="#deliverables">Deliverables</a></nav>
+      </div>
+      <div class="visual" data-enter>
+        <div class="visual-bar"><i></i><i></i><i></i><span>attack-path / shortest to Domain Admins</span></div>
+        <svg viewBox="0 0 440 330" role="img" aria-label="Example attack path from a phished user to Domain Admins in four steps" style="width:100%;height:auto;font-family:var(--mono)">
+          <defs>
+            <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#8B6CFF"/></marker>
+            <linearGradient id="nd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1A1535"/><stop offset="1" stop-color="#140D3D"/></linearGradient>
+          </defs>
+          <g fill="none" stroke="#8B6CFF" stroke-width="1.5" marker-end="url(#ah)">
+            <path d="M120 52 C200 52 220 92 268 108"/>
+            <path d="M300 136 C300 160 180 160 150 186"/>
+            <path d="M150 214 C150 240 260 236 290 256"/>
+          </g>
+          <g fill="#C4B0FF" font-size="10.5">
+            <text x="196" y="66">GenericAll</text>
+            <text x="200" y="152">AdminTo</text>
+            <text x="206" y="250">HasSession</text>
+          </g>
+          <g font-size="12">
+            <rect x="10" y="30" width="150" height="44" rx="9" fill="url(#nd)" stroke="#2A1D47"/>
+            <circle cx="30" cy="52" r="5" fill="#4D8BFF"/><text x="44" y="56" fill="#ECE9F5">j.peeters (user)</text>
+            <rect x="230" y="100" width="190" height="44" rx="9" fill="url(#nd)" stroke="#2A1D47"/>
+            <circle cx="250" cy="122" r="5" fill="#E9B23A"/><text x="264" y="126" fill="#ECE9F5">IT-Helpdesk (group)</text>
+            <rect x="40" y="180" width="190" height="44" rx="9" fill="url(#nd)" stroke="#2A1D47"/>
+            <circle cx="60" cy="202" r="5" fill="#F2762E"/><text x="74" y="206" fill="#ECE9F5">SRV-BACKUP01</text>
+            <rect x="230" y="256" width="200" height="50" rx="10" fill="rgba(255,93,115,.08)" stroke="#FF5D73"/>
+            <circle cx="252" cy="281" r="5" fill="#FF5D73"/><text x="266" y="285" fill="#FF5D73" font-weight="600">DOMAIN ADMINS</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="wrap">
+      <div class="section-head">
+        <div><p class="eyebrow">What we review</p><h2>Identity on-premises and in the cloud</h2></div>
+        <p class="sub">Most organisations run a hybrid of both. We review them together, because attackers move freely between them.</p>
+      </div>
+
+      <article class="svc" id="ad">
+        <div class="svc-head">
+          <span class="tag">On-premises identity</span>
+          <h3>Active Directory security review</h3>
+          <p>A thorough assessment of your domain, forest and certificate services, combining attack path analysis with a configuration review against hardening baselines.</p>
+          <dl class="meta">
+            <div><dt>Approach</dt><dd>Read-only collection with a standard user account, followed by manual analysis</dd></div>
+            <div><dt>Baselines</dt><dd>Microsoft tiering model, CIS Benchmarks, ANSSI AD guidance</dd></div>
+          </dl>
+        </div>
+        <div class="svc-body">
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="5" cy="12" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="19" cy="19" r="2"/><path d="M7 11l10-5M7 13l10 5"/></svg>Attack path analysis</h4><p>Graph-based mapping of every route from ordinary users to Tier 0 assets.</p></div>
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>AD Certificate Services</h4><p>Template and enrolment misconfigurations (ESC1 to ESC15) that lead straight to domain takeover.</p></div>
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Privileged access &amp; Kerberos</h4><p>Privileged groups, delegation, service accounts, Kerberoastable and AS-REP roastable accounts.</p></div>
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>GPOs, ACLs &amp; hygiene</h4><p>Dangerous permissions, legacy protocols, password policy, LAPS and stale objects.</p></div>
+        </div>
+      </article>
+
+      <article class="svc" id="cloud">
+        <div class="svc-head">
+          <span class="tag">Cloud identity &amp; configuration</span>
+          <h3>Cloud security review</h3>
+          <p>A review of your cloud tenants from an attacker's perspective: who can do what, what is exposed, and how a single compromised identity could spread.</p>
+          <dl class="meta">
+            <div><dt>Platforms</dt><dd>Microsoft Entra ID &amp; Azure, Microsoft 365, AWS, Google Cloud</dd></div>
+            <div><dt>Baselines</dt><dd>CIS Foundations Benchmarks, vendor security best practices</dd></div>
+          </dl>
+        </div>
+        <div class="svc-body">
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Identity &amp; access</h4><p>Roles, conditional access, MFA coverage, guest access, app registrations and consent grants.</p></div>
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>Privilege escalation</h4><p>IAM policies, managed identities and service principals that let attackers climb.</p></div>
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M7 18a4 4 0 0 1-.5-8A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9Z"/></svg>Exposed resources</h4><p>Public storage, open management ports, secrets in code and misconfigured networking.</p></div>
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 7h8M8 17h8"/><circle cx="5" cy="7" r="2"/><circle cx="19" cy="17" r="2"/></svg>Hybrid identity</h4><p>Entra Connect, federation and sync paths between on-premises AD and the cloud.</p></div>
+          <div class="tile wide"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>Logging &amp; detection</h4><p>Whether the logs you need are switched on, retained and actually reach your SOC when an attacker starts moving.</p></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="band" id="deliverables">
+    <div class="wrap split top">
+      <div>
+        <p class="eyebrow">Deliverables</p>
+        <h2>A prioritised roadmap, not a 400-page export</h2>
+        <p class="sub">Configuration tools produce long lists. We tell you which handful of changes removes the most risk, and in what order.</p>
+      </div>
+      <ul class="checklist">
+        <li>Attack path overview <small>The routes we found, visualised, with the exact misconfiguration at each step.</small></li>
+        <li>Prioritised remediation roadmap <small>Quick wins, structural improvements and long-term hardening.</small></li>
+        <li>Detailed technical findings <small>Evidence, impact and step-by-step remediation for every issue.</small></li>
+        <li>Workshop with your administrators <small>We walk through the results and answer "how do we fix this safely?".</small></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap split top">
+      <div><p class="eyebrow">Questions</p><h2>AD &amp; cloud review FAQ</h2><p class="sub">Not sure which review fits? We will help you choose.</p></div>
+      <div class="faq">
+        <details><summary>What access do you need?</summary><p>For Active Directory, a standard domain user account and a workstation or VPN connection is enough for most of the review. For cloud, a read-only reviewer role in the tenants in scope.</p></details>
+        <details><summary>Is this different from an internal pentest?</summary><p>Yes. An internal pentest proves what an attacker can exploit within a time box. A review is broader and more systematic: it looks at the whole configuration, including risks that are hard to exploit today but dangerous tomorrow.</p></details>
+        <details><summary>Will the review affect our users?</summary><p>No. Data collection is read-only and low-volume. We coordinate timing with your administrators so nothing unexpected shows up in monitoring.</p></details>
+        <details><summary>How long does a review take?</summary><p>Usually five to fifteen days depending on the number of domains, tenants and subscriptions in scope.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="more">
+    <div class="wrap">
+      <div class="section-head"><div><p class="eyebrow">Go further</p><h2>Related services</h2></div><p class="sub">Prove the paths are closed, or see whether anyone notices when we use them.</p></div>
+      <div class="others">
+        <a class="other" href="penetration-testing.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M1 12h4M19 12h4"/></svg></span><span><strong>Penetration Testing</strong><span>Networks, web and APIs</span></span></a>
+        <a class="other" href="adversary-simulation.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="12" r="6"/><circle cx="15" cy="12" r="6"/></svg></span><span><strong>Red &amp; Purple Teaming</strong><span>Test detection and response</span></span></a>
+        <a class="other" href="training.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m6 9 3 3-3 3M12 15h5"/></svg></span><span><strong>Training</strong><span>Hands-on offensive courses</span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="start">
+    <div class="wrap">
+      <div class="cta-band">
+        <img class="cube" src="assets/brand/shadowops-mark-dark.svg" alt="" aria-hidden="true" width="340" height="340">
+        <div><h2>See your environment the way an attacker does</h2><p>Tell us about your domains and cloud tenants. We will propose a scope and timeline that fits.</p></div>
+        <div class="btn-row"><a class="btn" href="contact.html?service=AD%20or%20cloud%20review">Request a review <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <img src="assets/brand/shadowops-logo-horizontal-dark.svg" alt="ShadowOps" width="166" height="54">
+        <p>Penetration testing, adversary simulation, identity and cloud reviews, and hands-on offensive security training.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="penetration-testing.html">Penetration Testing</a></li>
+          <li><a href="adversary-simulation.html">Red &amp; Purple Teaming</a></li>
+          <li><a href="security-reviews.html">AD &amp; Cloud Reviews</a></li>
+          <li><a href="training.html">Training</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html#approach">Approach</a></li>
+          <li><a href="index.html#why">Why ShadowOps</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="mailto:info@shadowops.eu">info@shadowops.eu</a></li>
+          <li><a href="contact.html">Book a scoping call</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span data-year>2026</span> ShadowOps. All rights reserved.</span>
+      <span>Authorised testing only.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

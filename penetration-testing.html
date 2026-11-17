@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Penetration Testing – Networks, Web Applications &amp; APIs | ShadowOps</title>
+<meta name="description" content="Manual penetration testing of external and internal networks, systems, web applications and APIs. Proven findings, clear remediation and a free retest.">
+<meta name="theme-color" content="#0B0916">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ShadowOps">
+<meta property="og:title" content="Penetration Testing – Networks, Web Applications &amp; APIs | ShadowOps">
+<meta property="og:description" content="Manual penetration testing of external and internal networks, systems, web applications and APIs. Proven findings, clear remediation and a free retest.">
+<meta property="og:image" content="assets/brand/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="ShadowOps home"><img src="assets/brand/shadowops-logo-horizontal-dark.svg" alt="ShadowOps – Offensive Security Refined" width="142" height="46"></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+      <svg class="open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <div class="nav-drop current">
+        <button type="button" aria-expanded="false" aria-controls="mega">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="mega" id="mega">
+          <a href="penetration-testing.html" aria-current="page"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M1 12h4M19 12h4"/></svg></span><strong>Penetration Testing</strong><span>Networks, systems, web applications and APIs</span></a>
+          <a href="adversary-simulation.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="12" r="6"/><circle cx="15" cy="12" r="6"/></svg></span><strong>Red &amp; Purple Teaming</strong><span>Adversary simulation and detection tuning</span></a>
+          <a href="security-reviews.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><path d="M12 7v5M5 17v-5h14v5"/></svg></span><strong>Active Directory &amp; Cloud</strong><span>Identity and configuration reviews</span></a>
+          <a href="training.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m6 9 3 3-3 3M12 15h5"/></svg></span><strong>Offensive Security Training</strong><span>Custom, hands-on courses for your team</span></a>
+        </div>
+      </div>
+      <a href="index.html#approach">Approach</a>
+      <a href="index.html#why">Why ShadowOps</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn" href="contact.html">Book a scoping call</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero grid-bg">
+    <div class="wrap split">
+      <div data-enter>
+        <ol class="crumbs"><li><a href="index.html">Home</a></li><li><a href="index.html#services">Services</a></li><li aria-current="page">Penetration Testing</li></ol>
+        <p class="eyebrow">01 / Assess</p>
+        <h1>Penetration testing for networks, applications and APIs</h1>
+        <p class="lead">We test a defined scope the way a skilled attacker would: manually, creatively and with a focus on what can really be exploited. You get proof, impact and a fix for every finding.</p>
+        <div class="btn-row">
+          <a class="btn" href="contact.html?service=Penetration%20testing">Request a pentest <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <nav class="jump" aria-label="On this page">
+          <a href="#external">External network</a><a href="#internal">Internal network &amp; systems</a><a href="#web">Web applications</a><a href="#api">APIs</a>
+        </nav>
+      </div>
+      <div class="visual" data-enter>
+        <div class="visual-bar"><i></i><i></i><i></i><span>shadowops@ops: ~/engagement</span></div>
+        <div class="term" aria-hidden="true">
+          <div><span class="p">$</span> scope --show</div>
+          <div class="c">  external   203.0.113.0/27, *.client.example</div>
+          <div class="c">  internal   10.20.0.0/16 (assumed breach)</div>
+          <div class="c">  web/api    portal, api/v2</div>
+          <div><span class="p">$</span> enumerate --external</div>
+          <div>  <span class="ok">[+]</span> 14 services exposed, 3 login portals</div>
+          <div>  <span class="w">[!]</span> vpn.client.example  outdated firmware</div>
+          <div><span class="p">$</span> test api/v2 --authz</div>
+          <div>  <span class="bad">[x]</span> GET /invoices/{id}  other tenant's data</div>
+          <div>  <span class="bad">[x]</span> PATCH /users/me  role=admin accepted</div>
+          <div><span class="p">$</span> report --draft <span class="caret"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="scope">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">What we test</p>
+          <h2>Four scopes, one rigorous method</h2>
+        </div>
+        <p class="sub">Choose one scope or combine them. We test black box, grey box or white box depending on what gives you the most value for the time available.</p>
+      </div>
+
+      <article class="svc" id="external">
+        <div class="svc-head">
+          <span class="tag">Infrastructure / outside-in</span>
+          <h3>External network penetration testing</h3>
+          <p>Everything you expose to the internet, seen through the eyes of an attacker with no prior access.</p>
+          <dl class="meta">
+            <div><dt>Typical targets</dt><dd>Firewalls, VPN gateways, mail, remote access, exposed services</dd></div>
+            <div><dt>Goal</dt><dd>Find a way in before anyone else does</dd></div>
+          </dl>
+        </div>
+        <div class="svc-body">
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Attack surface discovery</h4><p>OSINT, DNS and certificate analysis to find the hosts and services you might not know about.</p></div>
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6l-8-3Z"/></svg>Perimeter devices</h4><p>VPN, firewall and remote access appliances tested for known and unknown weaknesses.</p></div>
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Authentication</h4><p>Password spraying, MFA gaps and exposed login portals, within agreed safe limits.</p></div>
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h16M12 4v16"/></svg>Exploitation</h4><p>Confirmed, controlled exploitation to show whether a weakness really leads inside.</p></div>
+        </div>
+      </article>
+
+      <article class="svc" id="internal">
+        <div class="svc-head">
+          <span class="tag">Infrastructure / inside-out</span>
+          <h3>Internal network &amp; systems penetration testing</h3>
+          <p>What happens once an attacker is inside: a compromised laptop, a malicious insider or a rogue device on the network.</p>
+          <dl class="meta">
+            <div><dt>Typical targets</dt><dd>Workstations, servers, Active Directory, network segments, OT boundaries</dd></div>
+            <div><dt>Goal</dt><dd>Measure how far one foothold can go</dd></div>
+          </dl>
+        </div>
+        <div class="svc-body">
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>Assumed breach</h4><p>We start from a standard employee device and account, just like a phished user.</p></div>
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>Privilege escalation</h4><p>Local and domain escalation paths, misconfigurations and credential exposure.</p></div>
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="5" cy="12" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="19" cy="19" r="2"/><path d="M7 11l10-5M7 13l10 5"/></svg>Lateral movement</h4><p>How an attacker moves between hosts, segments and trust boundaries.</p></div>
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Segmentation testing</h4><p>Validation that sensitive zones, servers and OT networks are really isolated.</p></div>
+        </div>
+      </article>
+
+      <article class="svc" id="web">
+        <div class="svc-head">
+          <span class="tag">Applications / browser</span>
+          <h3>Web application penetration testing</h3>
+          <p>In-depth testing of customer portals, SaaS platforms and internal business applications, well beyond what a scanner finds.</p>
+          <dl class="meta">
+            <div><dt>Methodology</dt><dd>OWASP WSTG, OWASP Top 10 and ASVS</dd></div>
+            <div><dt>Goal</dt><dd>Protect your data, users and business logic</dd></div>
+          </dl>
+        </div>
+        <div class="svc-body">
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Authentication &amp; sessions</h4><p>Login, MFA, password reset, SSO and session handling flows.</p></div>
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg>Access control</h4><p>Horizontal and vertical privilege checks across roles and tenants.</p></div>
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m8 6-6 6 6 6M16 6l6 6-6 6"/></svg>Injection &amp; input handling</h4><p>SQL and command injection, XSS, SSRF, deserialisation and file upload abuse.</p></div>
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h10M4 18h7"/></svg>Business logic</h4><p>Abusing workflows, prices, limits and approvals in ways developers did not foresee.</p></div>
+        </div>
+      </article>
+
+      <article class="svc" id="api">
+        <div class="svc-head">
+          <span class="tag">Applications / machine-to-machine</span>
+          <h3>API penetration testing</h3>
+          <p>REST, GraphQL and SOAP APIs behind your web and mobile apps, partner integrations and microservices.</p>
+          <dl class="meta">
+            <div><dt>Methodology</dt><dd>OWASP API Security Top 10</dd></div>
+            <div><dt>We work from</dt><dd>OpenAPI / Swagger specs, Postman collections or live traffic</dd></div>
+          </dl>
+        </div>
+        <div class="svc-body">
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg>Object-level authorisation</h4><p>The most common API flaw: reading or changing objects that belong to someone else.</p></div>
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Tokens &amp; authentication</h4><p>JWT, OAuth 2.0 and API key handling, scopes and token lifetimes.</p></div>
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>Mass assignment &amp; data exposure</h4><p>Hidden fields, over-sharing responses and parameters that should never be writable.</p></div>
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Rate limits &amp; resource abuse</h4><p>Brute force, enumeration and expensive queries, including GraphQL introspection and batching.</p></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="band" id="how">
+    <div class="wrap split top">
+      <div>
+        <p class="eyebrow">Every pentest includes</p>
+        <h2>More than a list of vulnerabilities</h2>
+        <p class="sub">The same standards apply to every scope, from a single API to a full network.</p>
+        <div class="standards"><span>OWASP WSTG</span><span>OWASP ASVS</span><span>OWASP API Top 10</span><span>PTES</span><span>NIST SP 800-115</span><span>CVSS v4.0</span></div>
+      </div>
+      <ul class="checklist">
+        <li>Kick-off and rules of engagement <small>Agreed scope, test windows, contacts and safe-testing limits.</small></li>
+        <li>Manual testing by senior consultants <small>Tools for coverage, people for the findings that matter.</small></li>
+        <li>Immediate escalation of critical issues <small>You hear about serious risks the moment we confirm them.</small></li>
+        <li>Report with evidence and remediation <small>Executive summary, CVSS-rated findings and reproduction steps.</small></li>
+        <li>Debrief and free retest <small>We walk your team through the results and verify the fixes.</small></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap split top">
+      <div>
+        <p class="eyebrow">Questions</p>
+        <h2>Penetration testing FAQ</h2>
+        <p class="sub">Anything else? Ask us during a no-obligation scoping call.</p>
+      </div>
+      <div class="faq">
+        <details><summary>How long does a penetration test take?</summary><p>It depends on the scope. A single web application or API typically takes between three and ten testing days; a combined external and internal network test can take two to four weeks. We give you a fixed estimate after scoping.</p></details>
+        <details><summary>Will testing disrupt our production systems?</summary><p>We agree safe-testing limits and test windows up front, avoid denial-of-service techniques unless explicitly requested, and stay in contact throughout. Many clients test production; we can also test an acceptance environment.</p></details>
+        <details><summary>Black box, grey box or white box?</summary><p>Grey box, with test accounts and documentation, gives the most results per day. Black box is useful when you want an outsider's view; white box with source code access gives the deepest coverage.</p></details>
+        <details><summary>Does a pentest help with compliance?</summary><p>Yes. Our reports support requirements in ISO 27001, NIS2, DORA, SOC 2 and PCI DSS, and customer security questionnaires that ask for independent testing.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="more">
+    <div class="wrap">
+      <div class="section-head"><div><p class="eyebrow">Go further</p><h2>Related services</h2></div><p class="sub">A pentest shows what is vulnerable. These show what an attacker could do with it.</p></div>
+      <div class="others">
+        <a class="other" href="adversary-simulation.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="12" r="6"/><circle cx="15" cy="12" r="6"/></svg></span><span><strong>Red &amp; Purple Teaming</strong><span>Test detection and response</span></span></a>
+        <a class="other" href="security-reviews.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><path d="M12 7v5M5 17v-5h14v5"/></svg></span><span><strong>AD &amp; Cloud Reviews</strong><span>Identity and configuration</span></span></a>
+        <a class="other" href="training.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m6 9 3 3-3 3M12 15h5"/></svg></span><span><strong>Training</strong><span>Hands-on offensive courses</span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="start">
+    <div class="wrap">
+      <div class="cta-band">
+        <img class="cube" src="assets/brand/shadowops-mark-dark.svg" alt="" aria-hidden="true" width="340" height="340">
+        <div><h2>Ready to scope your pentest?</h2><p>Share what you want tested and we will come back with a scope, approach, timeline and fixed price.</p></div>
+        <div class="btn-row"><a class="btn" href="contact.html?service=Penetration%20testing">Request a pentest <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <img src="assets/brand/shadowops-logo-horizontal-dark.svg" alt="ShadowOps" width="166" height="54">
+        <p>Penetration testing, adversary simulation, identity and cloud reviews, and hands-on offensive security training.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="penetration-testing.html">Penetration Testing</a></li>
+          <li><a href="adversary-simulation.html">Red &amp; Purple Teaming</a></li>
+          <li><a href="security-reviews.html">AD &amp; Cloud Reviews</a></li>
+          <li><a href="training.html">Training</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html#approach">Approach</a></li>
+          <li><a href="index.html#why">Why ShadowOps</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="mailto:info@shadowops.eu">info@shadowops.eu</a></li>
+          <li><a href="contact.html">Book a scoping call</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span data-year>2026</span> ShadowOps. All rights reserved.</span>
+      <span>Authorised testing only.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

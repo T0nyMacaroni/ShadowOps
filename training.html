@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Custom Hands-On Offensive Security Training | ShadowOps</title>
+<meta name="description" content="Custom, lab-driven offensive security training for developers, administrators, SOC analysts and pentesters, built around your technology stack and taught by active practitioners.">
+<meta name="theme-color" content="#0B0916">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ShadowOps">
+<meta property="og:title" content="Custom Hands-On Offensive Security Training | ShadowOps">
+<meta property="og:description" content="Custom, lab-driven offensive security training for developers, administrators, SOC analysts and pentesters, built around your technology stack and taught by active practitioners.">
+<meta property="og:image" content="assets/brand/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="ShadowOps home"><img src="assets/brand/shadowops-logo-horizontal-dark.svg" alt="ShadowOps – Offensive Security Refined" width="142" height="46"></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+      <svg class="open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <div class="nav-drop current">
+        <button type="button" aria-expanded="false" aria-controls="mega">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="mega" id="mega">
+          <a href="penetration-testing.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M1 12h4M19 12h4"/></svg></span><strong>Penetration Testing</strong><span>Networks, systems, web applications and APIs</span></a>
+          <a href="adversary-simulation.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="12" r="6"/><circle cx="15" cy="12" r="6"/></svg></span><strong>Red &amp; Purple Teaming</strong><span>Adversary simulation and detection tuning</span></a>
+          <a href="security-reviews.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><path d="M12 7v5M5 17v-5h14v5"/></svg></span><strong>Active Directory &amp; Cloud</strong><span>Identity and configuration reviews</span></a>
+          <a href="training.html" aria-current="page"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m6 9 3 3-3 3M12 15h5"/></svg></span><strong>Offensive Security Training</strong><span>Custom, hands-on courses for your team</span></a>
+        </div>
+      </div>
+      <a href="index.html#approach">Approach</a>
+      <a href="index.html#why">Why ShadowOps</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn" href="contact.html">Book a scoping call</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero grid-bg">
+    <div class="wrap split">
+      <div data-enter>
+        <ol class="crumbs"><li><a href="index.html">Home</a></li><li><a href="index.html#services">Services</a></li><li aria-current="page">Training</li></ol>
+        <p class="eyebrow">04 / Train</p>
+        <h1>Hands-on offensive security training, built for your team</h1>
+        <p class="lead">Your people learn to attack by attacking. Our courses are taught by consultants who do this work every week, and are tailored to your technology, your skill level and the threats you face.</p>
+        <div class="btn-row">
+          <a class="btn" href="contact.html?service=Training">Design a training <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <nav class="jump" aria-label="On this page"><a href="#tracks">Course tracks</a><a href="#format">Format</a><a href="#custom">How we tailor it</a></nav>
+      </div>
+      <div class="visual" data-enter>
+        <div class="visual-bar"><i></i><i></i><i></i><span>lab-03 / ad-attacks · student-07</span></div>
+        <div class="term" aria-hidden="true">
+          <div class="c"># Objective: compromise the CORP domain</div>
+          <div class="c"># Hint: look at certificate templates</div>
+          <div><span class="p">$</span> find-templates --vulnerable</div>
+          <div>  <span class="w">[!]</span> UserAuth-Legacy  ESC1  enrollee supplies subject</div>
+          <div><span class="p">$</span> request-cert --template UserAuth-Legacy --upn administrator</div>
+          <div>  <span class="ok">[+]</span> certificate issued: administrator.pfx</div>
+          <div><span class="p">$</span> authenticate --pfx administrator.pfx</div>
+          <div>  <span class="ok">[+]</span> TGT obtained for CORP\administrator</div>
+          <div>  <span class="bad">[✓]</span> flag{templates_are_tier_zero}</div>
+          <div class="c"># Next: write the detection for what you just did</div>
+          <div><span class="p">$</span> <span class="caret"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tracks">
+    <div class="wrap">
+      <div class="section-head">
+        <div><p class="eyebrow">Course tracks</p><h2>Starting points we shape around you</h2></div>
+        <p class="sub">Every course is customised. These tracks show the ground we cover; we mix modules and set the depth to match your audience.</p>
+      </div>
+      <div class="tracks">
+        <article class="track">
+          <div class="lvl" aria-label="Level: foundation to intermediate"><i class="on"></i><i class="on"></i><i></i></div>
+          <h3>Web &amp; API hacking</h3>
+          <p>For developers, QA and AppSec teams who want to understand how their applications get broken.</p>
+          <ul><li>OWASP Top 10 and API Top 10 in practice</li><li>Authentication, authorisation and session flaws</li><li>Injection, SSRF and deserialisation</li><li>Secure coding fixes for every attack</li></ul>
+        </article>
+        <article class="track">
+          <div class="lvl" aria-label="Level: intermediate"><i class="on"></i><i class="on"></i><i></i></div>
+          <h3>Active Directory &amp; infrastructure attacks</h3>
+          <p>For system administrators, engineers and blue teams who manage or defend Windows environments.</p>
+          <ul><li>Enumeration and attack path mapping</li><li>Kerberos attacks and credential abuse</li><li>AD CS exploitation</li><li>Hardening and detection for each technique</li></ul>
+        </article>
+        <article class="track">
+          <div class="lvl" aria-label="Level: advanced"><i class="on"></i><i class="on"></i><i class="on"></i></div>
+          <h3>Red team tradecraft</h3>
+          <p>For pentesters, red teamers and detection engineers who want to go deeper.</p>
+          <ul><li>Initial access and payload development</li><li>EDR internals and evasion concepts</li><li>Command and control infrastructure</li><li>Operating safely and covertly</li></ul>
+        </article>
+        <article class="track">
+          <div class="lvl" aria-label="Level: foundation to intermediate"><i class="on"></i><i class="on"></i><i></i></div>
+          <h3>Cloud attacks</h3>
+          <p>For cloud engineers and platform teams running Azure, Microsoft 365 or AWS.</p>
+          <ul><li>Entra ID and Azure attack techniques</li><li>AWS IAM privilege escalation</li><li>Abusing CI/CD and secrets</li><li>Cloud logging and detection</li></ul>
+        </article>
+        <article class="track">
+          <div class="lvl" aria-label="Level: intermediate"><i class="on"></i><i class="on"></i><i></i></div>
+          <h3>Offence for defenders</h3>
+          <p>For SOC analysts and incident responders who want to recognise attacks from the inside.</p>
+          <ul><li>Running the attacks you hunt for</li><li>Mapping activity to MITRE ATT&amp;CK</li><li>Writing and testing detection rules</li><li>Purple team exercises in the lab</li></ul>
+        </article>
+        <article class="track">
+          <div class="lvl" aria-label="Level: any"><i class="on"></i><i></i><i></i></div>
+          <h3>Fully custom</h3>
+          <p>Something specific in mind? A technology, a recent incident or a capture-the-flag event for your team.</p>
+          <ul><li>Built from your requirements</li><li>Based on your own stack where possible</li><li>From a half-day workshop to a full week</li><li>Optional CTF to close the course</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="format">
+    <div class="wrap">
+      <div class="section-head"><div><p class="eyebrow">Format</p><h2>How our training works</h2></div><p class="sub">Little slideware, lots of keyboard time. Participants leave with skills they can use the next morning.</p></div>
+      <div class="features">
+        <div class="feature"><span class="k">// 70% labs</span><h3>Hands-on first</h3><p>Most of the time is spent in lab environments, attacking realistic systems step by step.</p></div>
+        <div class="feature"><span class="k">// your stack</span><h3>Realistic labs</h3><p>Dedicated lab environments that mirror the technologies your team works with.</p></div>
+        <div class="feature"><span class="k">// practitioners</span><h3>Taught by testers</h3><p>Trainers who run real engagements, sharing what works in the field today.</p></div>
+        <div class="feature"><span class="k">// on-site or remote</span><h3>Flexible delivery</h3><p>At your office, at a venue of your choice, or remote with shared lab access.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="custom">
+    <div class="wrap">
+      <div class="section-head"><div><p class="eyebrow">How we tailor it</p><h2>From first call to final lab</h2></div><p class="sub">A custom course does not have to take months to prepare. Here is how we get from your goals to a finished training.</p></div>
+      <ol class="steps">
+        <li><h3>Intake</h3><p>We discuss your audience, goals, technology and preferred format.</p></li>
+        <li><h3>Skills check</h3><p>An optional short assessment so we set the right starting level.</p></li>
+        <li><h3>Curriculum</h3><p>You receive a proposed outline with modules, labs and timing to review.</p></li>
+        <li><h3>Delivery</h3><p>Hands-on sessions with labs, exercises and an optional capture-the-flag.</p></li>
+        <li><h3>Follow-up</h3><p>Course materials, lab write-ups and feedback on how your team performed.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band" id="faq">
+    <div class="wrap split top">
+      <div><p class="eyebrow">Questions</p><h2>Training FAQ</h2><p class="sub">Tell us what you have in mind and we will tell you what is possible.</p></div>
+      <div class="faq">
+        <details><summary>How many participants can join?</summary><p>We recommend six to sixteen participants per trainer so everyone gets individual attention during the labs.</p></details>
+        <details><summary>What do participants need?</summary><p>A laptop with a modern browser and, for some tracks, a virtual machine we provide. Labs are hosted, so no complex setup is needed.</p></details>
+        <details><summary>Can the training use our own applications?</summary><p>Yes. Using your own code or a copy of your environment makes the training even more relevant. We can also build labs that closely resemble it.</p></details>
+        <details><summary>Is offensive training safe to give to employees?</summary><p>Every course covers the legal and ethical framework for security testing, and all exercises take place in isolated lab environments.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="start">
+    <div class="wrap">
+      <div class="cta-band">
+        <img class="cube" src="assets/brand/shadowops-mark-dark.svg" alt="" aria-hidden="true" width="340" height="340">
+        <div><h2>Let us build a course for your team</h2><p>Share who you want to train and what they should be able to do afterwards. We will send you a proposed curriculum.</p></div>
+        <div class="btn-row"><a class="btn" href="contact.html?service=Training">Design a training <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <img src="assets/brand/shadowops-logo-horizontal-dark.svg" alt="ShadowOps" width="166" height="54">
+        <p>Penetration testing, adversary simulation, identity and cloud reviews, and hands-on offensive security training.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="penetration-testing.html">Penetration Testing</a></li>
+          <li><a href="adversary-simulation.html">Red &amp; Purple Teaming</a></li>
+          <li><a href="security-reviews.html">AD &amp; Cloud Reviews</a></li>
+          <li><a href="training.html">Training</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html#approach">Approach</a></li>
+          <li><a href="index.html#why">Why ShadowOps</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="mailto:info@shadowops.eu">info@shadowops.eu</a></li>
+          <li><a href="contact.html">Book a scoping call</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span data-year>2026</span> ShadowOps. All rights reserved.</span>
+      <span>Authorised testing only.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

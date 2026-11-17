@@ -3,127 +3,270 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ShadowOps – Coming soon</title>
-<meta name="description" content="ShadowOps is launching soon. Penetration testing, red teaming and purple teaming.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230b0d16'/><path d='M16 5 6 9v7c0 6 4 9 10 11 6-2 10-5 10-11V9z' fill='%238b6cff'/><path d='M16 5v22c-6-2-10-5-10-11V9z' fill='%230b0d16'/></svg>">
+<title>ShadowOps – Penetration Testing, Red Teaming &amp; Offensive Security Training</title>
+<meta name="description" content="ShadowOps tests your networks, web applications, APIs, Active Directory and cloud the way real attackers do, runs red and purple team operations, and trains your engineers hands-on.">
+<meta name="theme-color" content="#0B0916">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ShadowOps">
+<meta property="og:title" content="ShadowOps – Offensive Security Refined">
+<meta property="og:description" content="Penetration testing, red and purple teaming, Active Directory and cloud reviews, and hands-on offensive security training.">
+<meta property="og:image" content="assets/brand/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --ink:#0b0d16; --line:#262a48; --panel:#12152a;
-  --text:#ece9f5; --muted:#a2a0b8; --violet:#8b6cff; --signal:#ff5d73;
-  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
-  --body:"Instrument Sans","Segoe UI",system-ui,sans-serif;
-  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-}
-*{box-sizing:border-box;margin:0}
-html,body{height:100%}
-body{background:var(--ink);color:var(--text);font:400 1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
-:focus-visible{outline:2px solid var(--violet);outline-offset:3px;border-radius:4px}
-.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
-
-.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;overflow:hidden;
-  background:
-   radial-gradient(circle 420px at var(--x,70%) var(--y,40%),rgba(139,108,255,.16),transparent 70%),
-   linear-gradient(var(--line) 1px,transparent 1px) 0 0/56px 56px,
-   linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/56px 56px,
-   var(--ink);
-  background-blend-mode:normal,soft-light,soft-light,normal}
-.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,transparent 20%,var(--ink) 95%);pointer-events:none}
-
-header{position:relative;z-index:3;padding:1.4rem 0}
-.logo{display:inline-flex;align-items:center;gap:.6rem;font:800 1.3rem var(--display);letter-spacing:-.01em}
-
-main{position:relative;z-index:3;flex:1;display:flex;align-items:center}
-.eyebrow{display:inline-flex;align-items:center;gap:.6rem;font:500 .85rem var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:1.4rem}
-.eyebrow::before{content:"";width:.55rem;height:.55rem;border-radius:50%;background:var(--signal);box-shadow:0 0 0 0 rgba(255,93,115,.6);animation:pulse 2.2s infinite}
-@keyframes pulse{70%{box-shadow:0 0 0 .7rem rgba(255,93,115,0)}100%{box-shadow:0 0 0 0 rgba(255,93,115,0)}}
-h1{font:800 clamp(2.8rem,8vw,6.2rem)/.98 var(--display);letter-spacing:-.035em;max-width:11ch}
-h1 em{font-style:normal;color:var(--violet)}
-.lead{margin-top:1.6rem;max-width:46ch;color:var(--muted);font-size:1.2rem}
-
-form{margin-top:2.2rem;display:flex;gap:.7rem;flex-wrap:wrap;max-width:32rem}
-input{flex:1 1 15rem;font:400 1rem var(--body);color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.8rem .95rem}
-input::placeholder{color:#7e7c96}
-input:focus{outline:2px solid var(--violet);outline-offset:1px;border-color:transparent}
-button{padding:.8rem 1.4rem;border:1px solid var(--violet);border-radius:8px;background:var(--violet);color:#fff;font:600 1rem var(--body);cursor:pointer;transition:background .2s,transform .2s}
-button:hover{background:#a08aff;transform:translateY(-1px)}
-.hint{margin-top:1.6rem;color:var(--muted);font-size:.92rem}
-
-footer{position:relative;z-index:3;padding:1.6rem 0;color:var(--muted);font-size:.92rem}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;border-top:1px solid var(--line);padding-top:1.4rem}
-
-.found{position:absolute;inset:0;z-index:1;pointer-events:none;
-  -webkit-mask-image:radial-gradient(circle 190px at var(--x,70%) var(--y,40%),#000 30%,transparent 100%);
-          mask-image:radial-gradient(circle 190px at var(--x,70%) var(--y,40%),#000 30%,transparent 100%)}
-.found span{position:absolute;font:500 .88rem var(--mono);color:var(--signal);white-space:nowrap;
-  padding:.35rem .6rem;border:1px solid rgba(255,93,115,.45);border-radius:6px;background:rgba(255,93,115,.08)}
-.found span::before{content:"";display:inline-block;width:.5rem;height:.5rem;border-radius:50%;background:var(--signal);margin-right:.55rem}
-
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-</style>
+<link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-<div class="hero" id="hero">
-  <div class="found" aria-hidden="true">
-    <span style="left:8%;top:24%">status: staging environment</span>
-    <span style="left:56%;top:16%">pentesting: ready</span>
-    <span style="left:64%;top:46%">red teaming: ready</span>
-    <span style="left:12%;top:68%">purple teaming: ready</span>
-    <span style="left:58%;top:74%">launch: imminent</span>
-    <span style="left:32%;top:88%">website: 98% deployed</span>
-    <span style="left:78%;top:30%">you found us early</span>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="ShadowOps home"><img src="assets/brand/shadowops-logo-horizontal-dark.svg" alt="ShadowOps – Offensive Security Refined" width="142" height="46"></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+      <svg class="open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <div class="nav-drop">
+        <button type="button" aria-expanded="false" aria-controls="mega">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="mega" id="mega">
+          <a href="penetration-testing.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M1 12h4M19 12h4"/></svg></span><strong>Penetration Testing</strong><span>Networks, systems, web applications and APIs</span></a>
+          <a href="adversary-simulation.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="12" r="6"/><circle cx="15" cy="12" r="6"/></svg></span><strong>Red &amp; Purple Teaming</strong><span>Adversary simulation and detection tuning</span></a>
+          <a href="security-reviews.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><path d="M12 7v5M5 17v-5h14v5"/></svg></span><strong>Active Directory &amp; Cloud</strong><span>Identity and configuration reviews</span></a>
+          <a href="training.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m6 9 3 3-3 3M12 15h5"/></svg></span><strong>Offensive Security Training</strong><span>Custom, hands-on courses for your team</span></a>
+        </div>
+      </div>
+      <a href="index.html#approach">Approach</a>
+      <a href="index.html#why">Why ShadowOps</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn" href="contact.html">Book a scoping call</a>
+    </nav>
   </div>
+</header>
 
-  <header>
-    <div class="wrap">
-      <span class="logo">
-        <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 5 7.5v8c0 6.500 4.500 10 11 12.500 6.500-2.500 11-6 11-12.500v-8z" fill="#8b6cff"/><path d="M16 3v25C9.500 25.500 5 22 5 15.500v-8z" fill="#0b0d16"/></svg>
-        ShadowOps
-      </span>
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero grid-bg" data-light>
+    <img class="hero-mark" src="assets/brand/shadowops-mark-animated.svg" alt="" aria-hidden="true" width="460" height="460">
+    <div class="found" aria-hidden="true">
+      <span style="left:6%;top:16%">/admin reachable without login</span>
+      <span style="left:50%;top:12%">storage account "backups-prod" is public</span>
+      <span style="left:60%;top:42%">svc_sql is a member of Domain Admins</span>
+      <span style="left:10%;top:70%">default credentials on iDRAC</span>
+      <span style="left:55%;top:76%">IDOR on /api/v2/invoices/{id}</span>
+      <span style="left:30%;top:90%">ESC8: AD CS web enrolment over HTTP</span>
+      <span style="left:76%;top:24%">JWT signed with "secret"</span>
+      <span style="left:72%;top:60%">EDR blind to LSASS dump via comsvcs</span>
     </div>
-  </header>
-
-  <main>
-    <div class="wrap">
-      <div class="eyebrow">Launching soon</div>
-      <h1>Something is <em>moving</em> in the dark.</h1>
-      <p class="lead">Site is Loading ....</p>
-      <form id="form">
-        <input type="email" name="email" placeholder="you@company.com" aria-label="Email address" required autocomplete="email">
-        <button type="submit">Notify me</button>
-      </form>
-      <p class="hint" id="hint">Get a notification when the site launches.</p>
+    <div class="wrap" data-enter>
+      <p class="eyebrow">Offensive Security Refined</p>
+      <h1>Penetration testing and red teaming that think like attackers.</h1>
+      <p class="lead">ShadowOps tests your networks, applications, Active Directory and cloud the way real adversaries do. Every finding is proven, explained and paired with a fix your engineers can act on.</p>
+      <div class="btn-row">
+        <a class="btn" href="contact.html">Book a scoping call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn ghost" href="#services">Explore services</a>
+      </div>
+      <div class="hero-facts">
+        <span class="chip">Manual, expert-led testing</span>
+        <span class="chip">Free retest of fixed findings</span>
+        <span class="chip">OWASP &amp; MITRE ATT&amp;CK aligned</span>
+      </div>
+      <p class="hint" id="hint">Move your cursor to light up what is hiding in the dark.</p>
     </div>
-  </main>
+  </section>
 
-  <footer>
+  <!-- SERVICES -->
+  <section id="services">
     <div class="wrap">
-      <span>© <span id="yr"></span> ShadowOps. Authorised testing only.</span>
-      <span>contact@shadowops.eu</span>
-    </div>
-  </footer>
-</div>
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Services</p>
+          <h2>Four ways we put your defences to the test</h2>
+        </div>
+        <p class="sub">Start with a single application or go all the way to a full adversary simulation. Each service is scoped to your environment, your risks and your goals.</p>
+      </div>
 
-<script>
-const hero=document.getElementById('hero'),found=hero.querySelector('.found'),hint=document.getElementById('hint');
-const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-let t=0,pointer=false;
-const set=(x,y)=>{for(const el of [hero,found]){el.style.setProperty('--x',x+'px');el.style.setProperty('--y',y+'px')}};
-hero.addEventListener('pointermove',e=>{if(e.pointerType==='mouse'){pointer=true;const r=hero.getBoundingClientRect();set(e.clientX-r.left,e.clientY-r.top)}});
-hero.addEventListener('pointerleave',()=>{pointer=false});
-if(!reduce){(function drift(){
-  if(!pointer){const r=hero.getBoundingClientRect();t+=.006;
-    set(r.width*(.5+.38*Math.sin(t*1.3)),r.height*(.5+.3*Math.sin(t*1.9+1)))}
-  requestAnimationFrame(drift)})();
-}else{set(innerWidth*.65,innerHeight*.45)}
-if(matchMedia('(hover: none)').matches)hint.textContent='The light is scanning. Watch what it uncovers.';
-document.getElementById('yr').textContent=new Date().getFullYear();
-document.getElementById('form').addEventListener('submit',e=>{
-  e.preventDefault();const email=new FormData(e.target).get('email');
-  location.href='mailto:contact@shadowops.eu?subject='+encodeURIComponent('Notify me at launch')+'&body='+encodeURIComponent('Please notify me when ShadowOps launches: '+email);
-});
-</script>
+      <div class="pillars">
+        <a class="pillar" href="penetration-testing.html">
+          <div class="pillar-top">
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M1 12h4M19 12h4"/></svg></span>
+            <span class="num">01 / Assess</span>
+          </div>
+          <h3>Penetration Testing</h3>
+          <p>Find and prove the weaknesses in a defined scope before someone else does.</p>
+          <ul><li>External network</li><li>Internal network &amp; systems</li><li>Web applications</li><li>APIs</li></ul>
+          <span class="link-arrow">Penetration testing <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+
+        <a class="pillar" href="adversary-simulation.html">
+          <div class="pillar-top">
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="12" r="6"/><circle cx="15" cy="12" r="6"/></svg></span>
+            <span class="num">02 / Simulate</span>
+          </div>
+          <h3>Red &amp; Purple Teaming</h3>
+          <p>Test whether your people, processes and tooling detect and stop a determined attacker.</p>
+          <ul><li>Objective-based red teaming</li><li>Assumed breach</li><li>Collaborative purple teaming</li><li>Detection validation</li></ul>
+          <span class="link-arrow">Red &amp; purple teaming <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+
+        <a class="pillar" href="security-reviews.html">
+          <div class="pillar-top">
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><path d="M12 7v5M5 17v-5h14v5"/></svg></span>
+            <span class="num">03 / Review</span>
+          </div>
+          <h3>Active Directory &amp; Cloud Reviews</h3>
+          <p>Map the identity and configuration paths an attacker would use to reach your crown jewels.</p>
+          <ul><li>Active Directory &amp; AD CS</li><li>Entra ID / hybrid identity</li><li>Microsoft Azure</li><li>AWS &amp; Google Cloud</li></ul>
+          <span class="link-arrow">AD &amp; cloud reviews <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+
+        <a class="pillar" href="training.html">
+          <div class="pillar-top">
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m6 9 3 3-3 3M12 15h5"/></svg></span>
+            <span class="num">04 / Train</span>
+          </div>
+          <h3>Offensive Security Training</h3>
+          <p>Custom, lab-driven courses that teach your engineers and defenders how attacks really work.</p>
+          <ul><li>Web &amp; API hacking</li><li>Active Directory attacks</li><li>Red team tradecraft</li><li>Tailored curricula</li></ul>
+          <span class="link-arrow">Training <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REPORT -->
+  <section class="band" id="report">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">What you receive</p>
+        <h2>A report your board and your engineers can both use</h2>
+        <p class="sub">Testing is only worth what you can do with the results. Our reports are written to be acted on, not filed away.</p>
+        <ul class="checklist">
+          <li>Executive summary <small>Business risk in plain language, with clear priorities.</small></li>
+          <li>Reproducible findings <small>Every issue with evidence, impact and step-by-step reproduction.</small></li>
+          <li>Practical remediation <small>Concrete fixes and configuration changes, not generic advice.</small></li>
+          <li>Debrief and retest <small>A walkthrough with your team and a retest of the fixed findings.</small></li>
+        </ul>
+      </div>
+      <div class="report" aria-label="Example report summary">
+        <div class="report-bar"><span class="dots"><i></i><i></i><i></i></span><span>SO-2026-014 · External &amp; Web</span></div>
+        <div class="report-sum">
+          <div><b style="color:var(--sev-critical)">1</b><span>Critical</span></div>
+          <div><b style="color:var(--sev-high)">3</b><span>High</span></div>
+          <div><b style="color:var(--sev-medium)">5</b><span>Medium</span></div>
+          <div><b style="color:var(--sev-low)">4</b><span>Low</span></div>
+          <div><b style="color:var(--sev-info)">6</b><span>Info</span></div>
+        </div>
+        <div class="finding"><span class="id">SO-01</span><span class="t">SQL injection in report export</span><span class="sev c">Critical</span><span class="d">Unauthenticated read access to the customer database.</span></div>
+        <div class="finding"><span class="id">SO-02</span><span class="t">Broken object-level authorisation</span><span class="sev h">High</span><span class="d">Any user can download another tenant's invoices.</span></div>
+        <div class="finding"><span class="id">SO-03</span><span class="t">VPN gateway missing security update</span><span class="sev h">High</span><span class="d">Publicly known vulnerability with a working exploit.</span></div>
+        <div class="finding"><span class="id">SO-04</span><span class="t">Verbose errors leak stack traces</span><span class="sev m">Medium</span><span class="d">Framework and library versions exposed to visitors.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section id="approach">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Approach</p>
+          <h2>How an engagement runs</h2>
+        </div>
+        <p class="sub">A clear process with one point of contact, agreed rules of engagement and no surprises along the way.</p>
+      </div>
+      <ol class="steps">
+        <li><h3>Scope</h3><p>We agree on objectives, targets, rules of engagement and timing in a scoping call.</p></li>
+        <li><h3>Recon</h3><p>We map your attack surface the way an outside or inside attacker would.</p></li>
+        <li><h3>Attack</h3><p>We safely exploit and chain weaknesses to show real business impact.</p></li>
+        <li><h3>Report</h3><p>You receive prioritised findings, evidence and fixes, followed by a debrief.</p></li>
+        <li><h3>Retest</h3><p>We verify your fixes and confirm the risk is actually closed.</p></li>
+      </ol>
+      <p class="sub" style="margin-top:3rem">Critical issues are reported to you the moment we confirm them, not weeks later in the final report.</p>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="band" id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Why ShadowOps</p>
+          <h2>Built by practitioners, for teams who want the truth</h2>
+        </div>
+        <p class="sub">We are a specialised offensive security company. We do not resell tools or run scanners and call it a pentest.</p>
+      </div>
+      <div class="features">
+        <div class="feature"><span class="k">// manual</span><h3>Hands-on, not tool-first</h3><p>Automation helps us cover ground. The findings that matter come from people who understand how systems break.</p></div>
+        <div class="feature"><span class="k">// impact</span><h3>Attack paths, not lists</h3><p>We chain weaknesses together to show what an attacker could really reach, so you can fix what matters first.</p></div>
+        <div class="feature"><span class="k">// defence</span><h3>Offence that improves defence</h3><p>Every engagement ends with detection and hardening advice your blue team can put to work straight away.</p></div>
+        <div class="feature"><span class="k">// direct</span><h3>Talk to the testers</h3><p>You work directly with the consultants doing the work, from scoping to debrief. No hand-offs, no account layers.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="start">
+    <div class="wrap">
+      <div class="cta-band">
+        <img class="cube" src="assets/brand/shadowops-mark-dark.svg" alt="" aria-hidden="true" width="340" height="340">
+        <div>
+          <h2>Find out what an attacker would find first</h2>
+          <p>Tell us about your environment and what keeps you up at night. We will come back with a proposed scope, approach and timeline.</p>
+        </div>
+        <div class="btn-row">
+          <a class="btn" href="contact.html">Book a scoping call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <img src="assets/brand/shadowops-logo-horizontal-dark.svg" alt="ShadowOps" width="166" height="54">
+        <p>Penetration testing, adversary simulation, identity and cloud reviews, and hands-on offensive security training.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="penetration-testing.html">Penetration Testing</a></li>
+          <li><a href="adversary-simulation.html">Red &amp; Purple Teaming</a></li>
+          <li><a href="security-reviews.html">AD &amp; Cloud Reviews</a></li>
+          <li><a href="training.html">Training</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html#approach">Approach</a></li>
+          <li><a href="index.html#why">Why ShadowOps</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="mailto:info@shadowops.eu">info@shadowops.eu</a></li>
+          <li><a href="contact.html">Book a scoping call</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span data-year>2026</span> ShadowOps. All rights reserved.</span>
+      <span>Authorised testing only.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>

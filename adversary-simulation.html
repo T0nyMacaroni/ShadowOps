@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Red Teaming &amp; Purple Teaming – Adversary Simulation | ShadowOps</title>
+<meta name="description" content="Objective-based red team operations and collaborative purple team exercises that test and improve how your organisation detects and responds to real attackers.">
+<meta name="theme-color" content="#0B0916">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ShadowOps">
+<meta property="og:title" content="Red Teaming &amp; Purple Teaming – Adversary Simulation | ShadowOps">
+<meta property="og:description" content="Objective-based red team operations and collaborative purple team exercises that test and improve how your organisation detects and responds to real attackers.">
+<meta property="og:image" content="assets/brand/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="ShadowOps home"><img src="assets/brand/shadowops-logo-horizontal-dark.svg" alt="ShadowOps – Offensive Security Refined" width="142" height="46"></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+      <svg class="open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <div class="nav-drop current">
+        <button type="button" aria-expanded="false" aria-controls="mega">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="mega" id="mega">
+          <a href="penetration-testing.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M1 12h4M19 12h4"/></svg></span><strong>Penetration Testing</strong><span>Networks, systems, web applications and APIs</span></a>
+          <a href="adversary-simulation.html" aria-current="page"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="12" r="6"/><circle cx="15" cy="12" r="6"/></svg></span><strong>Red &amp; Purple Teaming</strong><span>Adversary simulation and detection tuning</span></a>
+          <a href="security-reviews.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><path d="M12 7v5M5 17v-5h14v5"/></svg></span><strong>Active Directory &amp; Cloud</strong><span>Identity and configuration reviews</span></a>
+          <a href="training.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m6 9 3 3-3 3M12 15h5"/></svg></span><strong>Offensive Security Training</strong><span>Custom, hands-on courses for your team</span></a>
+        </div>
+      </div>
+      <a href="index.html#approach">Approach</a>
+      <a href="index.html#why">Why ShadowOps</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn" href="contact.html">Book a scoping call</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero grid-bg">
+    <div class="wrap split">
+      <div data-enter>
+        <ol class="crumbs"><li><a href="index.html">Home</a></li><li><a href="index.html#services">Services</a></li><li aria-current="page">Red &amp; Purple Teaming</li></ol>
+        <p class="eyebrow">02 / Simulate</p>
+        <h1>Red and purple teaming against real attacker behaviour</h1>
+        <p class="lead">A pentest asks what is vulnerable. Adversary simulation asks whether you would notice, and what you would do about it. We emulate real threat actors to test, and then strengthen, your detection and response.</p>
+        <div class="btn-row">
+          <a class="btn" href="contact.html?service=Red%20or%20purple%20teaming">Plan an exercise <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <nav class="jump" aria-label="On this page"><a href="#red">Red teaming</a><a href="#purple">Purple teaming</a><a href="#compare">Which one?</a></nav>
+      </div>
+      <div class="visual" data-enter aria-label="Example purple team scorecard">
+        <div class="visual-bar"><i></i><i></i><i></i><span>purple-team / scorecard</span></div>
+        <div class="report" style="box-shadow:none;border:0;background:transparent">
+          <div class="finding"><span class="id">T1566</span><span class="t">Phishing with ISO attachment</span><span class="sev l">Detected</span><span class="d">Initial access · mail gateway alert in 4 min</span></div>
+          <div class="finding"><span class="id">T1003</span><span class="t">LSASS memory dump</span><span class="sev c">Missed</span><span class="d">Credential access · no EDR alert raised</span></div>
+          <div class="finding"><span class="id">T1558</span><span class="t">Kerberoasting service accounts</span><span class="sev m">Logged</span><span class="d">Credential access · event logged, no alert rule</span></div>
+          <div class="finding"><span class="id">T1021</span><span class="t">Lateral movement over WinRM</span><span class="sev l">Detected</span><span class="d">Lateral movement · SOC triaged in 22 min</span></div>
+          <div class="finding"><span class="id">T1567</span><span class="t">Exfiltration to cloud storage</span><span class="sev c">Missed</span><span class="d">Exfiltration · proxy allowed upload</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services-detail">
+    <div class="wrap">
+      <div class="section-head">
+        <div><p class="eyebrow">Two complementary disciplines</p><h2>Test your defences, then make them better</h2></div>
+        <p class="sub">Red teaming measures your resilience without warning. Purple teaming improves it in the open, together with your defenders.</p>
+      </div>
+
+      <article class="svc" id="red">
+        <div class="svc-head">
+          <span class="tag">Covert / objective-based</span>
+          <h3>Red teaming</h3>
+          <p>A realistic, goal-driven operation against your organisation as a whole: people, processes and technology. Only a small control group knows the exercise is running.</p>
+          <dl class="meta">
+            <div><dt>Typical objectives</dt><dd>Access the payment system, the crown-jewel data or domain control</dd></div>
+            <div><dt>Frameworks</dt><dd>MITRE ATT&amp;CK, threat-led testing in the spirit of TIBER-EU and DORA TLPT</dd></div>
+            <div><dt>Duration</dt><dd>Typically 4 to 10 weeks</dd></div>
+          </dl>
+        </div>
+        <div class="svc-body">
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>Threat-informed scenarios</h4><p>Scenarios built around the actors and techniques most relevant to your sector.</p></div>
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16v12H5l-1 4V4Z"/></svg>Initial access</h4><p>Phishing, vishing, exposed services or an assumed-breach starting point when time is tight.</p></div>
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6l-8-3Z"/></svg>Stealth &amp; evasion</h4><p>Custom tooling and tradecraft to test your EDR, SIEM and SOC against a careful operator.</p></div>
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>Timeline &amp; replay</h4><p>A full attack timeline mapped to what your defenders saw, so you can replay the gaps.</p></div>
+        </div>
+      </article>
+
+      <article class="svc" id="purple">
+        <div class="svc-head">
+          <span class="tag">Collaborative / open-book</span>
+          <h3>Purple teaming</h3>
+          <p>We execute attack techniques step by step while your blue team watches, investigates and builds detections. Improvements land during the engagement, not months after.</p>
+          <dl class="meta">
+            <div><dt>Format</dt><dd>Workshops on-site or remote, with your SOC, CSIRT or MSSP</dd></div>
+            <div><dt>Output</dt><dd>ATT&amp;CK coverage map, tuned rules and repeatable test cases</dd></div>
+            <div><dt>Duration</dt><dd>From a few days to recurring quarterly cycles</dd></div>
+          </dl>
+        </div>
+        <div class="svc-body">
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>ATT&amp;CK coverage mapping</h4><p>A clear view of which techniques you prevent, detect, log or miss entirely.</p></div>
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m8 6-6 6 6 6M16 6l6 6-6 6"/></svg>Detection engineering</h4><p>Together we write and tune detection rules for your SIEM and EDR, such as Sigma or KQL.</p></div>
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>Control validation</h4><p>Proof that the security products you pay for actually trigger when it matters.</p></div>
+          <div class="tile"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3M18 3v4h-4M6 21v-4h4"/></svg>Repeatable playbooks</h4><p>Test cases your team can rerun after every change to stop regressions.</p></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="band" id="compare">
+    <div class="wrap">
+      <div class="section-head"><div><p class="eyebrow">Which one?</p><h2>Red, purple or a pentest?</h2></div><p class="sub">Each answers a different question. Many clients start with a pentest, move to purple teaming and test the result with a red team.</p></div>
+      <div class="features">
+        <div class="feature"><span class="k">// pentest</span><h3>What is vulnerable?</h3><p>Broad coverage of a defined scope. Best when you need to find and fix as many weaknesses as possible.</p></div>
+        <div class="feature"><span class="k">// purple</span><h3>Can we see it?</h3><p>Open collaboration to measure and raise detection coverage. Best for maturing a SOC or onboarding new tools.</p></div>
+        <div class="feature"><span class="k">// red</span><h3>Would we stop it?</h3><p>A covert, end-to-end test of people, process and technology. Best when your basics are in place.</p></div>
+        <div class="feature"><span class="k">// assumed breach</span><h3>What if they are in?</h3><p>Skip initial access and start inside. Best value when time or budget is limited.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap split top">
+      <div><p class="eyebrow">Questions</p><h2>Adversary simulation FAQ</h2><p class="sub">We are happy to talk through your situation before you commit to anything.</p></div>
+      <div class="faq">
+        <details><summary>Is red teaming safe for our business?</summary><p>Every operation runs under agreed rules of engagement with a control group on your side. We avoid destructive actions, check in at defined moments and can pause at any time.</p></details>
+        <details><summary>Are we ready for a red team?</summary><p>If you have not had regular penetration tests and a functioning detection capability, a red team will mostly confirm what you already suspect. In that case we recommend starting with a pentest or purple teaming.</p></details>
+        <details><summary>Do you work with our MSSP or MDR provider?</summary><p>Yes. Purple teaming is often the best way to verify what your provider detects and how quickly they escalate.</p></details>
+        <details><summary>Can you help with DORA TLPT or TIBER-EU?</summary><p>Our approach follows the same threat-led principles. Talk to us about your regulatory requirements and we will tell you honestly how we can support you.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="more">
+    <div class="wrap">
+      <div class="section-head"><div><p class="eyebrow">Go further</p><h2>Related services</h2></div><p class="sub">Build the foundation, close identity gaps, or train your defenders to think offensively.</p></div>
+      <div class="others">
+        <a class="other" href="penetration-testing.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M1 12h4M19 12h4"/></svg></span><span><strong>Penetration Testing</strong><span>Networks, web and APIs</span></span></a>
+        <a class="other" href="security-reviews.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><path d="M12 7v5M5 17v-5h14v5"/></svg></span><span><strong>AD &amp; Cloud Reviews</strong><span>Identity and configuration</span></span></a>
+        <a class="other" href="training.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m6 9 3 3-3 3M12 15h5"/></svg></span><span><strong>Training</strong><span>Hands-on offensive courses</span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="start">
+    <div class="wrap">
+      <div class="cta-band">
+        <img class="cube" src="assets/brand/shadowops-mark-dark.svg" alt="" aria-hidden="true" width="340" height="340">
+        <div><h2>Put your detection to the test</h2><p>Tell us about your security operations and what you want to learn. We will propose the right exercise and objectives.</p></div>
+        <div class="btn-row"><a class="btn" href="contact.html?service=Red%20or%20purple%20teaming">Plan an exercise <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <img src="assets/brand/shadowops-logo-horizontal-dark.svg" alt="ShadowOps" width="166" height="54">
+        <p>Penetration testing, adversary simulation, identity and cloud reviews, and hands-on offensive security training.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="penetration-testing.html">Penetration Testing</a></li>
+          <li><a href="adversary-simulation.html">Red &amp; Purple Teaming</a></li>
+          <li><a href="security-reviews.html">AD &amp; Cloud Reviews</a></li>
+          <li><a href="training.html">Training</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html#approach">Approach</a></li>
+          <li><a href="index.html#why">Why ShadowOps</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="mailto:info@shadowops.eu">info@shadowops.eu</a></li>
+          <li><a href="contact.html">Book a scoping call</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span data-year>2026</span> ShadowOps. All rights reserved.</span>
+      <span>Authorised testing only.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>
